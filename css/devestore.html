@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color: #1C233D;
+            color: white;
+        }
+
+        .nav {}
+
+        .nav li {
+            display: inline-block;
+            font-size: 25px;
+            padding: 20px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn {
+            color: white;
+            background-image: linear-gradient(to right, #E12D2D, #1254FE);
+            border-radius: 5px;
+            width: 100px;
+            height: 40px;
+            border: none;
+            margin-left: 100px;
+
+        }
+
+        .search-input {
+            width: 250px;
+            height: 30px;
+            border: 1px solid #E5E5E5;
+            border-radius: 3px;
+            background-color: transparent;
+            background: url('./assets/search-icon.svg') no-repeat left;
+            background-size: 10px;
+            background-position: 194px 10px;
+        }
+
+        .search-input::placeholder {
+            padding-left: 7px;
+            color: white;
+        }
+
+        .left,
+        .right {
+            height: 400px;
+        }
+
+        .left {
+            float: left;
+            width: 50%;
+        }
+
+        .right {
+            float: right;
+            width: 50%;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            .left,
+            .right {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        .div_left1 {
+            position: absolute;
+            width: 400px;
+            height: 231px;
+            left: 220px;
+            top: 138px;
+
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 77px;
+
+            color: #FFFFFF;
+        }
+
+        .div_left2 {
+            position: absolute;
+            width: 300px;
+            height: 40px;
+            left: 220px;
+            top: 381px;
+
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 20px;
+
+            color: #FFFFFF;
+        }
+
+        .btn2 {
+            position: absolute;
+            width: 199px;
+            height: 40px;
+            left: 218px;
+            top: 433px;
+
+            background: #8E99F8;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .logo1 {
+            position: absolute;
+            width: 200px;
+            height: 1510px;
+            left: 530px;
+            top: 689px;
+        }
+
+        .logo2 {
+            position: absolute;
+            width: 348px;
+            height: 100px;
+            left: 730px;
+            top: 689px;
+        }
+
+        .logo3 {
+            position: absolute;
+            width: 250px;
+            height: 130px;
+            left: 1000px;
+            top: 664px;
+        }
+
+        .div_SuperHot {
+            position: absolute;
+            width: 150px;
+            height: 26px;
+            left: 240px;
+            top: 865px;
+
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 26px;
+            color: #FFFFFF;
+        }
+
+        .list_btn {
+            position: absolute;
+            width: 90px;
+            height: 45px;
+            top: 920px;
+            border-radius: 5px;
+            border: none;
+            background: #30384D;
+
+            font-family: 'DM Mono';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 13px;
+            color: #FFFFFF;
+
+        }
+
+        .div_productImg {
+            position: absolute;
+            width: 270px;
+            height: 280px;
+            background: #30384D;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .img1 {
+            position: relative;
+            width: 222px;
+            height: 223px;
+            left: 22px;
+            right: 37px;
+            bottom: 15px;
+        }
+
+        .div_crazy_apes {
+            position: absolute;
+            width: 54px;
+            height: 13px;
+            left: 40px;
+            top: 246px;
+
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 10.5px;
+            line-height: 13px;
+
+            color: #FFFFFF;
+        }
+
+        .div_created {
+            position: absolute;
+            width: 126px;
+            height: 15px;
+            left: 40px;
+            top: 263px;
+
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 13px;
+
+            color: #FFFFFF;
+        }
+
+        .img_ellipse1 {
+            position: absolute;
+            width: 32px;
+            height: 30px;
+            left: 235px;
+            top: 241px;
+        }
+
+        .img_ellipse2 {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: 50px;
+            top: 297px;
+        }
+
+        .div_ICX {
+            position: absolute;
+            width: 52px;
+            height: 15px;
+            left: 75px;
+            top: 298px;
+
+            font-family: 'DM Mono';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 13px;
+
+            color: #FFFFFF;
+        }
+
+        .div_page {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            gap: 8px;
+
+            position: absolute;
+            width: 25px;
+            height: 25px;
+
+            top: 1758px;
+
+            border: 1px solid #99A3FF;
+            border-radius: 4px;
+        }
+
+        .div_page1 {
+            position: absolute;
+            left: 40%;
+            right: 30%;
+            top: 40%;
+            bottom: 40%;
+
+        }
+
+        .div_textpage {
+            width: 6px;
+            height: 20px;
+
+            /* Subtitle/Small/Bold */
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 143% */
+            text-align: center;
+            letter-spacing: 1px;
+
+            /* Brand/Primary/Light */
+            color: #99A3FF;
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+        .div_devestore {
+            position: absolute;
+            width: 195px;
+            height: 51px;
+            left: 280px;
+            top: 1878px;
+
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 51px;
+            /* identical to box height */
+            color: #E5E5E5;
+
+        }
+
+        .div_NFTs {
+            position: absolute;
+            width: 381px;
+            height: 40px;
+            left: 278px;
+            top: 1938px;
+
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+
+            color: #FFFFFF;
+
+        }
+
+        .div_hashtagTittle {
+            position: absolute;
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 26px;
+            /* identical to box height */
+            color: #FFFFFF;
+
+        }
+
+        .div_hashtag {
+            position: absolute;
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+
+            color: #FFFFFF;
+        }
+
+        .footer {
+            position: absolute;
+            height: 18px;
+            top: 2072px;
+
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            /* identical to box height */
+            color: #545C71;
+
+        }
+
+
+        /* .search-container {
+            position: relative;
+        } */
+
+        /* .search-icon {
+            position: fixed;
+            left: 250px;
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul class="nav" style="margin-left:180px;">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#clients">Our Clients</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <input class="search-input" placeholder="Search"></input>
+            <button class="btn">Connect</button>
+        </ul>
+    </header>
+    <section>
+        <div class="intro">
+            <div class="left">
+                <div class="div_left1">
+                    Discover, Sell & Collect Rare NFTs
+                </div>
+                <div class="div_left2">
+                    Digital marketplace for crypto collections and
+                    non-fungible tokens (NFTs)
+                </div>
+                <div>
+                    <button class="btn2" type="button">Discover Now</button>
+                </div>
+            </div>
+            <div class="right">
+                <img src="./assets/devera.png">
+            </div>
+        </div>
+        <div class="logo1">
+            <img src="./assets/icon.svg"></img>
+        </div>
+        <div class="logo2">
+            <img src="./assets/devera-logo.png"></img>
+        </div>
+        <div class="logo3">
+            <img height="110" src="./assets/lecle.png"></img>
+        </div>
+    </section>
+    <section>
+        <div class="div_SuperHot">
+            Super Hot
+        </div>
+        <div>
+            <button class="list_btn" style="left: 260px;">Music</button>
+            <button class="list_btn" style=" left: 400px; background: #8E99F8;">Art</button>
+            <button class="list_btn" style="left: 550px;">Sport</button>
+            <button class="list_btn" style="width: 180px; left: 700px;">Photography</button>
+            <button class="list_btn" style="width: 180px; left: 950px">Virtual Reality</button>
+            <button class="list_btn" style="left: 1180px;">Videos</button>
+            <button class="list_btn" style="left: 1330px;">...</button>
+        </div>
+        <ul class="nav">
+            <li class="div_productImg" style="left:230px; top: 1004px;">
+                <img class="img1" src="./assets/image_1.png">
+                <div class="div_crazy_apes">Crazy Apes</div>
+                <div class="div_created">Created by hx45...250e</div>
+                <img class="img_ellipse1" src="./assets/Ellipse_1.png">
+                <img class="img_ellipse2" src="./assets/Ellipse_2.png">
+                <div class="div_ICX">3.90 ICX</div>
+            </li>
+            <li class="div_productImg" style="left:690px; top: 1004px;">
+                <img class="img1" src="./assets/image_2.png">
+                <div class="div_crazy_apes">Crazy Apes</div>
+                <div class="div_created">Created by hx45...250e</div>
+                <img class="img_ellipse1" src="./assets/Ellipse_1.png">
+                <img class="img_ellipse2" src="./assets/Ellipse_2.png">
+                <div class="div_ICX">3.90 ICX</div>
+            </li>
+            <li class="div_productImg" style="left:1150px; top: 1004px;">
+                <img class="img1" src="./assets/image_3.png">
+                <div class="div_crazy_apes">Crazy Apes</div>
+                <div class="div_created">Created by hx45...250e</div>
+                <img class="img_ellipse1" src="./assets/Ellipse_1.png">
+                <img class="img_ellipse2" src="./assets/Ellipse_2.png">
+                <div class="div_ICX">3.90 ICX</div>
+            </li>
+        </ul>
+        <ul class="nav">
+            <li class="div_productImg" style="left:230px; top: 1385px;">
+                <img class="img1" src="./assets/image_4.png">
+                <div class="div_crazy_apes">Crazy Apes</div>
+                <div class="div_created">Created by hx45...250e</div>
+                <img class="img_ellipse1" src="./assets/Ellipse_1.png">
+                <img class="img_ellipse2" src="./assets/Ellipse_2.png">
+                <div class="div_ICX">3.90 ICX</div>
+            </li>
+            <li class="div_productImg" style="left:690px; top: 1385px;">
+                <img class="img1" src="./assets/image_5.png">
+                <div class="div_crazy_apes">Crazy Apes</div>
+                <div class="div_created">Created by hx45...250e</div>
+                <img class="img_ellipse1" src="./assets/Ellipse_1.png">
+                <img class="img_ellipse2" src="./assets/Ellipse_2.png">
+                <div class="div_ICX">3.90 ICX</div>
+            </li>
+            <li class="div_productImg" style="left:1150px; top: 1385px;">
+                <img class="img1" src="./assets/image_6.png">
+                <div class="div_crazy_apes">Crazy Apes</div>
+                <div class="div_created">Created by hx45...250e</div>
+                <img class="img_ellipse1" src="./assets/Ellipse_1.png">
+                <img class="img_ellipse2" src="./assets/Ellipse_2.png">
+                <div class="div_ICX">3.90 ICX</div>
+            </li>
+        </ul>
+        <div>
+            <div class="div_page" style="left: 710px;">
+                <img class="div_page1" src="./assets/Union.png">
+            </div>
+            <div class="div_page" style="left: 760px;">
+                <img class="div_page1" src="./assets/Vector.png">
+            </div>
+            <div class="div_page" style="left: 810px;">
+                <span class="div_textpage">1</span>
+            </div>
+            <div class="div_page" style="left: 860px; background: #8E99F8">
+                <span class="div_textpage" style="color: #EBEDFF;">2</span>
+            </div>
+            <div class="div_page" style="left: 910px;">
+                <span class="div_textpage">3</span>
+            </div>
+            <div class="div_page" style="left: 960px;">
+                <img class="div_page1" src="./assets/Vector_1.png">
+            </div>
+            <div class="div_page" style="left: 1010px;">
+                <img class="div_page1" src="./assets/Union_1.png">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <div class="div_devestore">Devestore</div>
+            <div class="div_NFTs">Amazing NFTs marketplace, Authentic and unique
+                digital creation.</div>
+            <div
+                style="position: absolute; width: 29px; height: 28px; left: 280px; top: 2005px; background: url(./assets/face.png);">
+            </div>
+            <div
+                style="position: absolute; width: 29px; height: 28px; left: 325px; top: 2005px; background: url(./assets/yt.png);">
+            </div>
+            <div
+                style="position: absolute; width: 29px; height: 28px; left: 370px; top: 2005px; background: url(./assets/twitter.png);">
+            </div>
+        </div>
+        <div>
+            <div class="div_hashtagTittle" style=" width: 121px; height: 26px; left: 920px; top: 1891px;">Marketplace
+            </div>
+            <div class="div_hashtag" style="width: 58px; height: 20px; left: 951px; top: 1929px;">Explore</div>
+            <div class="div_hashtag" style="width: 36px; height: 20px; left: 959px; top: 1953px;">NFTs</div>
+            <div class="div_hashtag" style="width: 91px; height: 20px; left: 938px; top: 1978px;">Collectibles</div>
+            <div class="div_hashtag" style="width: 109px; height: 20px; left: 929px; top: 2005px;">Virtual Reality</div>
+        </div>
+        <div>
+            <div class="div_hashtagTittle" style="width: 101px; height: 26px; left: 1170px; top: 1891px;">Resources
+            </div>
+            <div class="div_hashtag" style="width: 91px; height: 20px; left: 1175px; top: 1924px;">Help Center</div>
+            <div class="div_hashtag" style="width: 66px; height: 20px; left: 1188px; top: 1952px;">Partners</div>
+            <div class="div_hashtag" style="width: 35px; height: 20px; left: 1203px; top: 1979px;">Blog</div>
+            <div class="div_hashtag" style="width: 83px; height: 20px; left: 1179px; top: 2005px;">Newsletter</div>
+        </div>
+        <div>
+            <div class="div_hashtagTittle" style="width: 91px; height: 26px; left: 1350px; top: 1891px;">Company</div>
+            <div class="div_hashtag" style="width: 71px; height: 20px; left: 1360px; top: 1928px;">About Us</div>
+            <div class="div_hashtag" style="width: 59px; height: 20px; left: 1366px; top: 1952px;">Careers</div>
+            <div class="div_hashtag" style="width: 64px; height: 20px; left: 1368px; top: 1979px;">Support</div>
+            <div class="div_hashtag" style="width: 83px; height: 20px; left: 1358px; top: 2005px;">Newsletter</div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer" style="width: 281px; left: 277px;">Copyright 2022 Devera, All right reserved</div>
+        <div class="footer" style=" width: 95px; left: 1179px;">Privacy Policy</div>
+        <div class="footer" style=" width: 129px; left: 1320px;">Terms & Conditions</div>
+
+    </footer>
+</body>
+
+</html>
